@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background: #bfd0e2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tanjiro1 {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .tanjiro2 {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <object id="tanjiro1" class="tanjiro1" data="tanjiro1.svg" onmouseover="teste()"></object>  
+        <object id="tanjiro2" class="tanjiro2" data="tanjiro2.svg" onmouseout="teste2()"></object> 
+    </div>
+    <script>
+        function teste(){
+            const testee = document.getElementById("tanjiro2");
+            const teste1 = document.getElementById("tanjiro1");
+
+            testee.style.display = "block";
+            teste1.style.display = "none";
+        }
+
+        function teste2(){
+            const testee = document.getElementById("tanjiro2");
+            const teste1 = document.getElementById("tanjiro1");
+
+            testee.style.display = "none";
+            teste1.style.display = "block";
+        }
+    </script>
+</body>
+</html>
